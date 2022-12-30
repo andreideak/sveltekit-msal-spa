@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { isUserAuthenticated } from '../stores';
 
+  // DEBUG
   let config = {
     authority: import.meta.env.VITE_MSAL_AUTHORITY,
     redirect_uri: import.meta.env.VITE_MSAL_REDIRECT_URI,
@@ -10,10 +11,15 @@
   };
   let tokenEncoded = '';
   let tokenDecoded = '';
+  // /DEBUG
 
-  onMount(async () => {});
+
+  onMount(async () => {
+
+  });
 </script>
 
+<!-- DEBUG -->
 <h1>SvelteKit MSAL.js SPA</h1>
 
 <h2>Configuration</h2>
@@ -26,3 +32,5 @@
 <p>User Authenticated: {$isUserAuthenticated}</p>
 <p>Encoded Token: {tokenEncoded}</p>
 <p>Decoded Token: {tokenDecoded}</p>
+
+<!-- /DEBUG -->
